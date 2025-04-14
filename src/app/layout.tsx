@@ -1,24 +1,26 @@
-import { Footer, Layout, Navbar } from 'nextra-theme-docs'
-import { Banner, Head } from 'nextra/components'
-import { getPageMap } from 'nextra/page-map'
-import 'nextra-theme-docs/style.css'
- 
+import { Footer, Layout, Navbar } from "nextra-theme-docs";
+import { Banner, Head } from "nextra/components";
+import { getPageMap } from "nextra/page-map";
+import "nextra-theme-docs/style.css";
+
 export const metadata = {
   // Define your metadata here
   // For more information on metadata API, see: https://nextjs.org/docs/app/building-your-application/optimizing/metadata
-}
- 
-const banner = <Banner storageKey="some-key">Nextra 4.0 is released 🎉</Banner>
+};
+
+const banner = <Banner storageKey="some-key">Selamat Datang 🎉</Banner>;
 const navbar = (
   <Navbar
     logo={<b>📖 Dokumentasi</b>}
     // ... Your additional navbar options
   />
-)
-const footer = <Footer>{new Date().getFullYear()} © Dokumentasi Mamad.</Footer>
- 
-export default async function RootLayout({ children }:{
-  children: React.ReactNode
+);
+const footer = <Footer>{new Date().getFullYear()} © Dokumentasi Mamad.</Footer>;
+
+export default async function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
 }) {
   return (
     <html
@@ -42,12 +44,12 @@ export default async function RootLayout({ children }:{
           docsRepositoryBase="https://github.com/shuding/nextra/tree/main/docs"
           footer={footer}
           editLink={null}
-          feedback={{content:null}}
+          feedback={{ content: null }}
           // ... Your additional layout options
         >
           {children}
         </Layout>
       </body>
     </html>
-  )
+  );
 }

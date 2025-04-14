@@ -10,7 +10,7 @@ export default withNextra({
         return [
             {
                 source: '/',
-                destination: '/home',
+                destination: '/',
                 permanent: true,
             },
         ]
